@@ -60,7 +60,6 @@ const ViewTutorial = () => {
       setClickedTutorial(foundTutorial);
     }
   }, [data, clickButton, loading, error]);
-<<<<<<< HEAD
 
   // use effect for adding a count to each like / dislike to a tutorial
   useEffect(() => {
@@ -83,8 +82,6 @@ useEffect(() => {
   }
 }, [savedData, clickButton]);
 
-=======
->>>>>>> 676d7c83671c82490559de3ce2b83ccc5f2a4805
 
   const profileId = Auth.loggedIn() ? Auth.getProfile().data._id : null;
   const tutorialId = clickButton;
@@ -116,7 +113,6 @@ useEffect(() => {
       console.error('Error during mutation:', e);
     }
   };
-<<<<<<< HEAD
 
   const userThumbsUp = async () => {
     try {
@@ -165,8 +161,6 @@ useEffect(() => {
     }
   };
 
-=======
->>>>>>> 676d7c83671c82490559de3ce2b83ccc5f2a4805
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -185,7 +179,6 @@ useEffect(() => {
             author={clickedTutorial.author}
             category={clickedTutorial.category}
           />
-<<<<<<< HEAD
           <div>
             <Button className='thumbsUp' onClick={userThumbsUp}>
               <ThumbUpIcon />
@@ -204,10 +197,6 @@ useEffect(() => {
           
           </div>
           <DateFormatTutorial createdAt={clickedTutorial.createdAt} />
-=======
-          <DateFormatTutorial createdAt={clickedTutorial.createdAt} />
-
->>>>>>> 676d7c83671c82490559de3ce2b83ccc5f2a4805
           {clickedTutorial.videos && clickedTutorial.videos.length > 0 && (
             <VideoCarousel videos={clickedTutorial.videos} />
           )}
