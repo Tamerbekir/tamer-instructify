@@ -23,7 +23,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 const ViewTutorial = () => {
   const location = useLocation();
   const { clickButton } = location.state || {};
-<<<<<<< HEAD
 
   const { loading, data, error, refetch } = useQuery(QUERY_TUTORIALS, {
     fetchPolicy: 'cache-and-network',
@@ -57,18 +56,6 @@ const ViewTutorial = () => {
   //using useeffect to find tutorial data on button click 
   useEffect(() => {
     if (!loading && data && clickButton) {
-=======
-  
-  //using code to refetch data before defining it. Name for tutorials were being defined before being read which led to errors- so this will ensure data is loaded before rendering data
-  const { loading, data, error, refetch } = useQuery(QUERY_TUTORIALS, {
-    fetchPolicy: 'network-only', 
-  });
-  const [clickedTutorial, setClickedTutorial] = useState(null);
-
-  useEffect(() => {
-    if (!loading && data && clickButton) {
-      // console.log("Tutorial IDs in data:", data.tutorials.map(tutorial => tutorial._id));
->>>>>>> 676d7c83671c82490559de3ce2b83ccc5f2a4805
       const foundTutorial = data.tutorials.find((tutorial) => tutorial._id === clickButton);
       setClickedTutorial(foundTutorial);
     }
