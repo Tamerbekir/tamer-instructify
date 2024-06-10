@@ -8,7 +8,7 @@ import {
   Button,
   Auth,
   Link
-} from './index.js'
+} from './account.js'
 
 import './assets/account.css'
 
