@@ -14,11 +14,11 @@ import {
   TutorialCategories,
   ViewTutorial,
   Donation,
- } from './pages'
+  Account } from './pages'
 
 //importing from components index.js
 import { 
-  // VideoSearch, 
+  VideoSearch, 
   Login, Signup, 
   CreateTutorial, About } from './components';  
 
@@ -30,14 +30,14 @@ const router = createBrowserRouter([
       { index : true, element: <Home /> },
       { path: 'login', element: <Login /> },
       { path: 'signup', element: <Signup /> },
-      // { path: 'videosearch', element: <VideoSearch /> },
+      { path: 'videosearch', element: <VideoSearch /> },
       { path: 'dashboard', element: <Dashboard /> },
       { path: 'tutorial', element: <CreateTutorial /> },
       { path: 'categories', element: <TutorialCategories /> },
       { path: '/categories/view-tutorial', element: <ViewTutorial /> },
       { path: 'tutorial/:id', element: <DashboardTutorial /> },
       { path: 'about', element: <About /> },
-      // { path: 'account', element: <Account /> },
+      { path: 'account', element: <Account /> },
       { path: 'all', element: <All /> },    
       { path: 'donate', element: <Donation /> }
 ],
