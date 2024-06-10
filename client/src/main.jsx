@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import App from './App'
 import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -14,13 +14,13 @@ import {
   TutorialCategories,
   ViewTutorial,
   Donation,
-  Account } from './pages';
+  Account } from './pages'
 
 //importing from components index.js
 import { 
   VideoSearch, 
   Login, Signup, 
-  CreateTutorial, About } from './components';
+  CreateTutorial, About } from './components';  
 
 const router = createBrowserRouter([
   {
